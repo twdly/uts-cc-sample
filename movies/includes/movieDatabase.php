@@ -1,7 +1,7 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "admin";
+$servername = getenv('RDS_HOSTNAME');
+$username = getenv('RDS_USERNAME');
+$password = getenv('RDS_PASSWORD');
 $dbname = "moviedb";
 
 $conn = mysqli_connect($servername, $username, $password,$dbname );
